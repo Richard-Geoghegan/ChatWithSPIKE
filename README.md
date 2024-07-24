@@ -5,9 +5,9 @@
 
 ## Introduction
 
-When LEGO released firmware version 3 for SPIKE, the existing code for SPIKE firmware 2 no longer worked as intended. This created challenges for generating accurate and up-to-date code for SPIKE, especially since ChatGPT can write MicroPython but not specifically for LEGO SPIKE, often reverting to older firmware versions. This can be frustrating for teachers and pupils learning to code SPIKE with generative AI tools.
+When LEGO released firmware version 3 for their SPIKE robotics kit, the existing code for SPIKE firmware 2 no longer worked as intended. This created challenges for generating accurate and up-to-date code for SPIKE, especially since ChatGPT can write MicroPython but not accurately for the latest SPIKE firmware. This can be frustrating for teachers and pupils learning to code SPIKE with generative AI tools.
 
-To address these issues, ChatWithSPIKE allows users to upload the latest documentation directly onto the SPIKE device. This is important because SPIKE runs MicroPython, which lacks docstrings, so this functionality was recreated within the device. This ensures that ChatGPT can always generate code using the most current syntax and capabilities.
+To address these issues, ChatWithSPIKE allows users to upload the latest documentation directly onto the SPIKE device. This is important because SPIKE runs MicroPython, which lacks docstrings, so this functionality is recreated on the device when the user hits 'upload documentation'. This ensures that ChatGPT can always generate code using the most current syntax and capabilities.
 
 The 'upload documentation' button pushes the documentation onto SPIKE, enabling ChatGPT to query the device for the latest information. Users can easily update the content in the SPIKE-Documentation folder to reflect newer versions of the firmware, ensuring continued compatibility.
 
