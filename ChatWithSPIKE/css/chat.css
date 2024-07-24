@@ -1,0 +1,169 @@
+ /*  chat.css
+  *  Contains styling for chat bubbles among other elements
+  *
+  *  Developed by Richard Geoghegan (Pronounced Gay-ghun)
+  *  Contact: rpgeoghegan@gmail.com
+  *  Please alert me about any security vulnerabilities!
+  */
+
+body, html {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+}
+#chatBox {
+    background-color: rgb(0, 0, 0);
+    overflow-y: auto;
+    border: 2px solid rgb(38, 38, 41);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#jsonViewer {
+    background-color: rgb(0, 0, 0);
+    height: 400px;
+    overflow-y: auto;
+    border: 2px solid rgb(38, 38, 41);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* Custom styling for JSON list group items */
+.list-group-item.list-group-item-action {
+    background-color: rgb(38, 38, 41);
+    border: 0.5px solid #ffffff;
+    color: white;
+}
+
+.list-group-item.list-group-item-action:hover {
+    background-color: rgb(38, 38, 41);
+    border: 0.5px solid #ffffff;
+    color: white;
+}
+#userInput {
+    color: #ffffff;
+    background-color: rgb(0, 0, 0);
+    border-radius: 15px;
+    border: 2px solid rgb(38, 38, 41);
+}
+   
+#consoleInput {
+    color: #ffffff;
+    background-color: rgb(20, 20, 20);
+    border-radius: 15px;
+    border: 2px solid rgb(38, 38, 41);
+}
+
+.message-bubble {
+    display: inline-block;
+    padding: 10px;
+    border-radius: 15px;
+    color: #ffffff;
+    max-width: 80%;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+.hidden {
+    display: none;
+}
+
+.user-message {
+    background-color: rgb(62, 132, 247);
+    margin-right: 0;
+    margin-left: auto;
+}
+.ai-message {
+    background-color: rgb(38, 38, 41);
+    text-align: left;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.run-message {
+    color: #ffffff;
+    background-color: rgb(0, 0, 0);
+    text-align: left;
+    margin-top: 0;
+    margin-right: auto;
+    border-radius: 15px;
+    border: 1px solid #ffffff;
+}
+
+.run-message:hover {
+    color: grey;
+    border: 1px solid grey;
+}
+
+@keyframes dotFlashing {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+
+.loading-dots span {
+    animation: dotFlashing 1s infinite linear alternate;
+    font-size: 60px;
+    line-height: 0;
+    vertical-align: middle;
+}
+.loading-dots span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.loading-dots span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.username-label {
+    color: rgb(141, 141, 146);
+    font-size: 0.9em;
+    margin-bottom: 2px;
+}
+
+/* Adjust text alignment for usernames */
+.text-right .username-label {
+    text-align: right;
+    margin-right: 8px;
+}
+
+.text-left .username-label {
+    text-align: left;
+    margin-left: 8px;
+}
+
+.spike-message {
+    background-color: rgb(106, 205, 109);
+    color: #ffffff;
+    text-align: left;
+    margin-right: 0;
+    margin-left: auto;
+    font-family: "Source Code Pro", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+code {
+    color: #ffffff;
+    font-family: "Source Code Pro", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    background-color: rgb(0, 0, 0);
+    border-radius: 4px;
+    padding: 2px 4px;
+    font-size: 1.0em;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.rounded-btn {
+    font-size: 1.0em;
+    border-radius: 15px;
+} 
+  

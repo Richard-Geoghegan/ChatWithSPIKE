@@ -1,0 +1,81 @@
+<!-- index.html 
+     
+     Developed by Richard Geoghegan (Pronounced Gay-ghun)
+     Contact: rpgeoghegan@gmail.com
+     Please alert me about any security vulnerabilities!
+     Uses Bootstrap 3.4.1 for frontend -->
+     
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>SPIKE ChatGPT Integration</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.13/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-auth-compat.js"></script>
+    <script src="javascript/firebase-init.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+    <!-- Gabriel Sessions' PyREPL Connection -->
+    <script defer="defer" src="https://cdn.jsdelivr.net/gh/gabrielsessions/pyrepl-js/build/main.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/chat.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="col-12 justify-content-center align-items-center" style = "padding-bottom: 15px;">
+            <h2 style="text-align: center;">Message LEGO's SPIKE!</h2>
+            <div class="row justify-content-center">                
+                <div class="button-container">
+                    <div id="root"></div>
+                    <button id="documentation" class="btn btn-success rounded-btn">
+                        Upload Documentation <span class="glyphicon glyphicon-upload"></span>
+                    </button>
+                    <button id="stop" class="btn btn-danger rounded-btn">
+                        STOP <span class="glyphicon glyphicon-stop"></span>
+                    </button>
+                    <button id="toggleConsole" class="btn btn-warning rounded-btn">
+                        Show Console <span class="glyphicon glyphicon-console"></span>
+                    </button>
+                    <button id="toggleJson" class="btn btn-primary rounded-btn">
+                        Show JSON
+                    </button>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Console Output -->
+        <div class="row">
+            <div class="col-md-2" id = "Padding"></div>
+            <div class="col-md-8" id="chatContainer">
+                <!-- Initial message from SPIKE -->
+                <div id="chatBox" style="height: 680px;">
+                    <div class="text-left">
+                        <div class="username-label">PrimeBot</div>
+                        <div class="message-bubble ai-message">How can I help you with SPIKE 3 coding today?</div>
+                    </div>
+                    <!-- Chat messages will be dynamically added here -->
+                </div>
+                <input id="userInput" class="form-control" type="text" placeholder="Ask PrimeBot...">
+            </div>
+
+            <div class="col-md-4 hidden" id ="consoleOutputSection">
+                <div id="consoleEditor" style="height: 680px;"></div>
+                    <input type="text" id="consoleInput" class="form-control" placeholder="Command...">
+            </div>
+            <div class="col-md-4 hidden" style="height: 714px;" id ="jsonViewer">
+            </div>
+        </div>
+    </div>
+    <script src="javascript/auth-function.js"></script> 
+    <script src="javascript/chat.js"></script>
+</body>
+</html>
